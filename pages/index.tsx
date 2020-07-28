@@ -15,7 +15,10 @@ export default function Home() {
 const RandomThing = () => {
   const { data } = useSwr<{ randomThing: number }>(
     "/api/random-thing",
-    fetcher
+    fetcher,
+    {
+      revalidateOnFocus: false,
+    }
   );
 
   if (!data) {
