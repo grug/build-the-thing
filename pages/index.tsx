@@ -8,9 +8,12 @@ export default function Home() {
     <div className={styles.container}>
       <h1>My things!</h1>
       <RandomThing />
+      <AnotherThing />
     </div>
   );
 }
+
+const AnotherThing = () => <div>Next.js is cool</div>;
 
 const RandomThing = () => {
   const { data } = useSwr<{ randomThing: number }>(
