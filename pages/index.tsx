@@ -8,6 +8,7 @@ export default function Home() {
     <div className={styles.container}>
       <h1>My things</h1>
       <RandomThing />
+      <RandomThing />
     </div>
   );
 }
