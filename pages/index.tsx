@@ -8,10 +8,15 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <h1>My things</h1>
+      <AnotherThing />
       <RandomThing />
     </div>
   );
 }
+
+const AnotherThing = () => {
+  return <div>My name is Dave</div>;
+};
 
 const RandomThing = () => {
   const { data } = useSWR<{ randomThing: number }>(
